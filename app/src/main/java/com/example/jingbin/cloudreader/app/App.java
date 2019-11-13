@@ -66,9 +66,12 @@ public class App extends MultiDexApplication {
         config.setAutoProfile(true);
         // 设置使用AES加密
         config.setEncryptType(EncryptEnum.AES);
+        // 开启FragmentPageView采集
+        config.setAutoTrackFragmentPageView(true);
         // 初始化
         AnalysysAgent.init(this, config);
         AnalysysAgent.setAutoHeatMap(false);
+
         // 设置数据上传/更新地址
         AnalysysAgent.setUploadURL(this, UPLOAD_URL);
     }
